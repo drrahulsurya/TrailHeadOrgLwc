@@ -1,0 +1,18 @@
+<template>
+    <lightning-card title="This is a Parent componnent">
+        <div class="slds-var-m-around_medium" onclose={closedialogue}>
+            <h1>{message}</h1>
+            <lightning-button
+             variant="success"
+              label="Show model"
+               title="Successful action"
+                onclick={clickHandler}
+                 class="slds-var-m-left_x-small"></lightning-button>
+           
+                 <template if:true={showModel}>
+                <c-c2p-model-component></c-c2p-model-component>
+            </template>
+                
+        </div>
+    </lightning-card>    
+</template>

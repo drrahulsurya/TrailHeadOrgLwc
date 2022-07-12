@@ -1,0 +1,31 @@
+<template>
+    <c-p2c-alert-component 
+     message=" Hurrey  !! I got the data"
+     card-heading="Parent to child primitive data communications"
+     number=20
+     >       
+    </c-p2c-alert-component>
+
+    <div class="slds-var-m-around_medium">
+        <c-p2c-carousel-component carousel-details={carouselData}></c-p2c-carousel-component>
+    </div>
+
+    <lightning-card title="this is child component">
+        <lightning-input label="Progress bar value" type="number" onchange={handleChange}>
+
+        </lightning-input>
+       <c-p2c-progress-bar percentage-value={inPercentage}></c-p2c-progress-bar>
+    </lightning-card>
+
+    <lightning-card title="this is Parent component">
+        <div class="slds-var-m-around_medium">
+            <lightning-button variant="success" 
+            label="Reset" 
+            title="Successful action" 
+            onclick={handleClick} 
+            class="slds-var-m-left_x-small"></lightning-button>
+
+            <c-slider-bar></c-slider-bar>
+        </div>
+    </lightning-card>
+</template>

@@ -1,0 +1,29 @@
+<template>
+    <lightning-card>
+ <div class="slds-var-m-around_medium">
+        <lightning-button variant="brand" 
+        label="Brand" 
+        title="Primary action" 
+        onclick={handleClick} 
+        class="slds-var-m-around_medium">
+    </lightning-button>
+    <template if:true={isVisible}>
+        <div>Welcome to the text</div>
+    </template>
+
+    <template if:false={isVisible}>
+        <div>please click the button</div>
+    </template>
+    
+        <lightning-input 
+        type="text" 
+        label="Type hello to see the data" onkeyup={handleGet}>
+        </lightning-input>
+    
+    
+    <template if:true={helloMethod}>
+        <div>you are enter an accurate text</div>    
+    </template> 
+</div>
+</lightning-card>   
+</template>
